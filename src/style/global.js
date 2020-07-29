@@ -5,6 +5,11 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
 }
+html {
+    ${'' /* font-size: 62.5%; */}
+    box-sizing: border-box;
+    }
+}
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 20px;

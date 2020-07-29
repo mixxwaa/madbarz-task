@@ -19,8 +19,11 @@ const Svg = styled(Clock)`
   width: 1em;
   height: 1em;
   padding-left: 6px;
+  @media ${(props) => props.theme.mediaQueries.smaller} {
+    display: hidden;
+  }
 `;
-const Text = styled.span`
+const Text = styled.h1`
   font-size: 13px;
   padding-left: 4px;
   padding-right: 16px;

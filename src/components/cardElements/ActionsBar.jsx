@@ -8,9 +8,11 @@ import { ReactComponent as LikeFeed } from '../../svg/like-feed.svg';
 import { ReactComponent as LikeActive } from '../../svg/like active.svg';
 
 const Wrapper = styled.div`
-  display: flex;
+  ${'' /* display: flex;
   justify-content: space-between;
-  padding: 16.5px;
+  height: 56px;
+  background-color: green; */}
+  height: 57px;
 `;
 const ActionWrapper = styled.div`
   display: flex;
@@ -35,7 +37,7 @@ const LikeIconActive = styled(LikeActive)`
 function ActionsBar() {
   return (
     <Wrapper>
-      <ShareFeed />
+      {/* <ShareFeed />
       <ActionWrapper>
         <PairWrapper>
           <CommentIcon />
@@ -45,7 +47,7 @@ function ActionsBar() {
           <LikeIconActive />
           <span>124</span>
         </PairWrapper>
-      </ActionWrapper>
+      </ActionWrapper> */}
     </Wrapper>
   );
 }

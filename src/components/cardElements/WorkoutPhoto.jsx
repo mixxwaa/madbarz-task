@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+import WorkoutInfo from './WorkoutInfo';
+
+const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -20,19 +22,25 @@ const Gradient = styled.div`
 
 const WorkoutImg = styled.img`
   display: block;
-  height: auto;
+  ${'' /* height: 30rem; */}
   width: 100%;
+  object-fit: cover;
+`;
+const TextOverlay = styled(WorkoutInfo)`
+  position: absolute;
+  top: 10%;
 `;
 
 function WorkoutPhoto() {
   return (
-    <Wrapper>
+    <ImageWrapper>
       <Gradient />
       <WorkoutImg
         src="https://s3-alpha-sig.figma.com/img/13c3/ce16/b3c6cba478415d8f543d454133937c7e?Expires=1597017600&Signature=NSK7-oCLgvgE3ESZ7XWg-OJpHzuABD~IseboCIkAoWww-rNFzsyOQbRMsH5Yw61ULZTsCb3FUTmms4LFNcLtGkLjxrjLAjTZtuNJJss4D5yeYD4BrGCA8SKCyh8TC1M0n5j6wBGjHHwNDfXMTrGHG6T8X-J3FffOdd~Vorui6cmDpqnaO90X0oclXJBS1YWt7yZmDfBp8UnT42OViCo2jNNB3YLJbXEoAxDl7RruBN0MJc~x~4xniq5OvKoA2zG3PuLmdMf3lOuS61XfBmY4UIsjorR2SEHCun1Y1zeLZpHnOUaWBE4wMU0QE5jniQb2e6InV1aZYW0H1FYXNRmcjQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
         alt="#"
       />
-    </Wrapper>
+      <TextOverlay />
+    </ImageWrapper>
   );
 }
 

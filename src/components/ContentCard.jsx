@@ -6,16 +6,17 @@ import Avatar from './cardElements/Avatar';
 import data from '../data.json';
 import Header from './Header';
 import Time from './cardElements/Time';
-import WorkoutPhoto from './cardElements/WorkoutPhoto';
-import WorkoutDuration from './cardElements/WorkoutDuration';
 import ActionsBar from './cardElements/ActionsBar';
 import WorkoutComponent from './cardElements/WorkoutComponent';
 
 const MainWrapper = styled.div`
-  ${'' /* display: flex;
-  flex-direction: column; */}
-  max-width: 375px;
-  max-height: 488px;
+  display: flex;
+  flex-direction: column;
+  height: 375px;
+  max-width: 488px;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+  margin: 2rem;
 `;
 const UserWrapper = styled.div`
   height: 56px;
@@ -42,10 +43,9 @@ const ContentCard = () => {
         <Header />
         <Time />
       </UserWrapper>
-      <CenterSegmentWrap>
-        {/* <WorkoutDuration /> */}
-        <WorkoutComponent />
-      </CenterSegmentWrap>
+      {/* <CenterSegmentWrap> */}
+      <WorkoutComponent />
+      {/*  </CenterSegmentWrap> */}
       <ActionsBar />
     </MainWrapper>
   );

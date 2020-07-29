@@ -7,6 +7,9 @@ const TimePublished = styled.h1`
   color: #747474;
   padding-top: 18px;
   padding-right: 15px;
+  @media (max-width: 220px) {
+    display: none;
+  }
 `;
 
 function Time() {
