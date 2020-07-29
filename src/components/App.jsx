@@ -1,11 +1,11 @@
 import React from 'react';
 
-import FeedItem from './components/FeedItem';
+import ContentCard from './ContentCard';
 
 function App() {
   return (
     <div className="App">
-      <FeedItem />
+      <ContentCard />
     </div>
   );
 }
