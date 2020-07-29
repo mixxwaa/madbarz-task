@@ -7,19 +7,31 @@ import data from '../data.json';
 import Header from './Header';
 import Time from './cardElements/Time';
 import WorkoutPhoto from './cardElements/WorkoutPhoto';
+import WorkoutDuration from './cardElements/WorkoutDuration';
+import ActionsBar from './cardElements/ActionsBar';
+import WorkoutComponent from './cardElements/WorkoutComponent';
 
+const MainWrapper = styled.div`
+  ${'' /* display: flex;
+  flex-direction: column; */}
+  max-width: 375px;
+  max-height: 488px;
+`;
 const UserWrapper = styled.div`
-  margin: 11px 14px 11px 14px;
+  height: 56px;
   display: flex;
-  max-width: 500px;
   div:last-child {
     margin-left: auto;
   }
 `;
 
+const CenterSegmentWrap = styled.div`
+  background-color: yellow;
+`;
+
 const ContentCard = () => {
   return (
-    <div>
+    <MainWrapper>
       <UserWrapper>
         <Avatar
           src={
@@ -30,28 +42,12 @@ const ContentCard = () => {
         <Header />
         <Time />
       </UserWrapper>
-
-      <div>
-        <WorkoutPhoto />
-        <div>
-          <p>workout duration</p>
-          <p>part of plan</p>
-        </div>
-
-        <div>
-          <p>title</p>
-          <p>subtitle</p>
-        </div>
-        <div>
-          <p>footer card</p>
-          <div>share arrow</div>
-          <div>
-            <p>likes</p>
-            <p>comments</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      <CenterSegmentWrap>
+        {/* <WorkoutDuration /> */}
+        <WorkoutComponent />
+      </CenterSegmentWrap>
+      <ActionsBar />
+    </MainWrapper>
   );
 };
 export default ContentCard;

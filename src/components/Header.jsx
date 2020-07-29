@@ -5,6 +5,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 12px;
+  text-align: center;
+  justify-content: center;
 `;
 
 const Name = styled.h1`

@@ -11,5 +11,8 @@ body {
     font-style: "normal";
     font-weight: "normal";
     letter-spacing: -0.24px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
 }
 `;

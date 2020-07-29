@@ -5,7 +5,8 @@ const TimePublished = styled.h1`
   font-size: 12px;
   font-weight: normal;
   color: #747474;
-  padding-top: 8px;
+  padding-top: 18px;
+  padding-right: 15px;
 `;
 
 function Time() {
