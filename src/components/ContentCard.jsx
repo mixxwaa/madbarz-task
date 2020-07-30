@@ -12,8 +12,8 @@ import WorkoutComponent from './cardElements/WorkoutComponent';
 const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 375px;
-  max-width: 488px;
+  height: 488px;
+  max-width: 375px;
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 2rem;

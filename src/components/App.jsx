@@ -29,7 +29,6 @@ function App() {
       <Navbar />
       <ContentWrapper>
         <ContentCard />
-       
       </ContentWrapper>
     </MainWrapper>
   );

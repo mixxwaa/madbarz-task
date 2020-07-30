@@ -4,16 +4,16 @@ import WorkoutDuration from './WorkoutDuration';
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 60%;
+  top: 75%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
   z-index: 20;
-  width: 70%;
+  width: 75%;
   height: 80px;
   text-align: left;
   padding-left: 22px;
-  background-color: green;
 `;
 const WorkoutTitle = styled.h1`
   font-weight: normal;
