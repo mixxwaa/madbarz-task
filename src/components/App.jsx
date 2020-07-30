@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import ContentCard from './ContentCard';
 
+import Navbar from './Navbar';
+
 const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,10 +26,10 @@ const ContentWrapper = styled.div`
 function App() {
   return (
     <MainWrapper>
+      <Navbar />
       <ContentWrapper>
         <ContentCard />
-        <ContentCard />
-        <ContentCard />
+       
       </ContentWrapper>
     </MainWrapper>
   );

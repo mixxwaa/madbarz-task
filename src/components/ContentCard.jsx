@@ -15,7 +15,7 @@ const MainWrapper = styled.div`
   height: 375px;
   max-width: 488px;
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 2rem;
 `;
 const UserWrapper = styled.div`
@@ -43,9 +43,7 @@ const ContentCard = () => {
         <Header />
         <Time />
       </UserWrapper>
-      {/* <CenterSegmentWrap> */}
       <WorkoutComponent />
-      {/*  </CenterSegmentWrap> */}
       <ActionsBar />
     </MainWrapper>
   );

@@ -11,10 +11,10 @@ const Test = styled(WorkoutDuration)`
 
 function WorkoutComponent() {
   return (
-    <div>
+    <>
       {/* <WorkoutInfo /> */}
       <WorkoutPhoto />
-    </div>
+    </>
   );
 }
 

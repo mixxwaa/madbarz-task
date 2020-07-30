@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   height: 80px;
   text-align: left;
   padding-left: 22px;
+  background-color: green;
 `;
 const WorkoutTitle = styled.h1`
   font-weight: normal;

@@ -22,7 +22,7 @@ const Gradient = styled.div`
 
 const WorkoutImg = styled.img`
   display: block;
-  ${'' /* height: 30rem; */}
+  height: 272px;
   width: 100%;
   object-fit: cover;
 `;
