@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import WorkoutDuration from './WorkoutDuration';
+import { getText } from '../../actions';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -39,15 +40,16 @@ const WorkoutComment = styled.h2`
   }
 `;
 
-function WorkoutInfo() {
+function WorkoutInfo({ name, userComment, isFromPlan, Plan, duration }) {
+  const [nameAndComment, setnameAndComment] = useState([]);
+  useEffect(() => {
+    getText();
+  }, []);
   return (
     <Wrapper>
-      <WorkoutDuration />
-      <WorkoutTitle>Squatting for the summer</WorkoutTitle>
-      <WorkoutComment>
-        Getting that peach asdas das das dasd asdas dasd asdasdasd ad
-        asdasdasdasd
-      </WorkoutComment>
+      <WorkoutDuration duration={duration} plan={Plan} />
+      <WorkoutTitle>{name}</WorkoutTitle>
+      <WorkoutComment>{userComment}</WorkoutComment>
     </Wrapper>
   );
 }

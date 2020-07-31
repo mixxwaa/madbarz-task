@@ -19,11 +19,11 @@ const Featured = styled.h1`
   color: #ff8f00;
 `;
 
-function Header() {
+function Header({ name, featured }) {
   return (
     <Wrapper>
-      <Name>Mia Dimitriev</Name>
-      <Featured>Hot & Featured</Featured>
+      <Name>{name}</Name>
+      {featured ? <Featured>Hot & Featured</Featured> : null}
     </Wrapper>
   );
 }

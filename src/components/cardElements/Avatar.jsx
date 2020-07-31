@@ -20,11 +20,11 @@ const PremiumIcon = styled(Elipse)`
   right: 0;
 `;
 
-const Avatar = ({ src, alt }) => {
+const Avatar = ({ src, alt, premium }) => {
   return (
     <AvatarWrap>
       <AvatarImage src={src} alt={alt} />
-      <PremiumIcon />
+      {premium ? <PremiumIcon /> : null}
     </AvatarWrap>
   );
 };

@@ -12,10 +12,10 @@ const TimePublished = styled.h1`
   }
 `;
 
-function Time() {
+function Time({ date }) {
   return (
     <div>
-      <TimePublished>Just now</TimePublished>
+      <TimePublished>{date}</TimePublished>
     </div>
   );
 }

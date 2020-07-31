@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { connect } from 'react-redux';
 
 import styled from 'styled-components';
 
@@ -8,6 +9,7 @@ import Header from './Header';
 import Time from './cardElements/Time';
 import ActionsBar from './cardElements/ActionsBar';
 import WorkoutComponent from './cardElements/WorkoutComponent';
+import { setUsers } from '../actions';
 
 const MainWrapper = styled.div`
   display: flex;
@@ -26,26 +28,35 @@ const UserWrapper = styled.div`
   }
 `;
 
-const CenterSegmentWrap = styled.div`
-  background-color: yellow;
-`;
+const ContentCard = ({ feedInfo }) => {
+  const [loaded, setLoaded] = useState(false);
 
-const ContentCard = () => {
   return (
     <MainWrapper>
       <UserWrapper>
         <Avatar
-          src={
-            data.byId['00471c7b-569f-481f-a233-ad968513cc6f'].user.profilePhoto
-          }
+          onLoad={() => setLoaded(true)}
+          src={feedInfo.user.profilePhoto}
           alt="#"
+          premium={feedInfo.user.isPremium}
         />
-        <Header />
-        <Time />
+        <Header
+          name={feedInfo.user.displayName}
+          featured={feedInfo.workout.respected}
+        />
+        <Time date={feedInfo.dateFormatted} />
       </UserWrapper>
-      <WorkoutComponent />
+      <WorkoutComponent
+        image={feedInfo.workout.imageUrl}
+        name={feedInfo.workout.name}
+        userComment={feedInfo.workout.usersComment}
+        isFromPlan={feedInfo.workout.isFromPlan}
+        Plan={feedInfo.workoutFromPlanInfo.planInfoFormatted}
+        duration={feedInfo.workout.duration}
+      />
       <ActionsBar />
     </MainWrapper>
   );
 };
+
 export default ContentCard;

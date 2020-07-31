@@ -31,12 +31,12 @@ const Text = styled.span`
   color: #e5e5e5;
 `;
 
-function WorkoutDuration() {
+function WorkoutDuration({ duration, plan }) {
   return (
     <Wrapper>
       <Svg />
-      <Text>02:03:21</Text>
-       <Text>Intermediate - Week 1 - Workout 1</Text>
+      <Text>{duration}</Text>
+      <Text>{plan}</Text>
     </Wrapper>
   );
 }

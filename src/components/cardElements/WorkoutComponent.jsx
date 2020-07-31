@@ -1,19 +1,25 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import WorkoutPhoto from './WorkoutPhoto';
-import WorkoutDuration from './WorkoutDuration';
-import WorkoutInfo from './WorkoutInfo';
 
-const Test = styled(WorkoutDuration)`
-  background-color: red;
-`;
-
-function WorkoutComponent() {
+function WorkoutComponent({
+  image,
+  name,
+  userComment,
+  isFromPlan,
+  Plan,
+  duration,
+}) {
   return (
     <>
-      {/* <WorkoutInfo /> */}
-      <WorkoutPhoto />
+      <WorkoutPhoto
+        image={image}
+        name={name}
+        userComment={userComment}
+        isFromPlan={isFromPlan}
+        Plan={Plan}
+        duration={duration}
+      />
     </>
   );
 }
