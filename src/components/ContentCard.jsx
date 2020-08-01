@@ -4,21 +4,26 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 
 import Avatar from './cardElements/Avatar';
-import data from '../data.json';
+
 import Header from './Header';
 import Time from './cardElements/Time';
 import ActionsBar from './cardElements/ActionsBar';
 import WorkoutComponent from './cardElements/WorkoutComponent';
-import { setUsers } from '../actions';
 
 const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 488px;
-  max-width: 375px;
+  width: 375px;
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 2rem;
+  @media ${(props) => props.theme.mediaQueries.small} {
+    display: block;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
 `;
 const UserWrapper = styled.div`
   height: 56px;
@@ -29,32 +34,26 @@ const UserWrapper = styled.div`
 `;
 
 const ContentCard = ({ feedInfo }) => {
-  const [loaded, setLoaded] = useState(false);
-
+  if (Object.keys(feedInfo).length) {
+    return (
+      <MainWrapper>
+        <UserWrapper>
+          <Avatar
+            src={feedInfo.user.profilePhoto}
+            alt="#"
+            premium={feedInfo.user.isPremium}
+          />
+          <Header {...feedInfo} />
+          <Time date={feedInfo.dateFormatted} />
+        </UserWrapper>
+        <WorkoutComponent {...feedInfo} />
+        <ActionsBar {...feedInfo} />
+      </MainWrapper>
+    );
+  }
   return (
     <MainWrapper>
-      <UserWrapper>
-        <Avatar
-          onLoad={() => setLoaded(true)}
-          src={feedInfo.user.profilePhoto}
-          alt="#"
-          premium={feedInfo.user.isPremium}
-        />
-        <Header
-          name={feedInfo.user.displayName}
-          featured={feedInfo.workout.respected}
-        />
-        <Time date={feedInfo.dateFormatted} />
-      </UserWrapper>
-      <WorkoutComponent
-        image={feedInfo.workout.imageUrl}
-        name={feedInfo.workout.name}
-        userComment={feedInfo.workout.usersComment}
-        isFromPlan={feedInfo.workout.isFromPlan}
-        Plan={feedInfo.workoutFromPlanInfo.planInfoFormatted}
-        duration={feedInfo.workout.duration}
-      />
-      <ActionsBar />
+      <div>Loading...</div>
     </MainWrapper>
   );
 };

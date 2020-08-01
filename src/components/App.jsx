@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
-import { getFeed } from '../actions';
+import { getFeed, respectWorkout } from '../actions';
 
 import ContentCard from './ContentCard';
-
+import Loading from './Loading';
 import Navbar from './Navbar';
 
 const MainWrapper = styled.div`
@@ -29,6 +29,9 @@ const ContentWrapper = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(10rem, 25rem));
   justify-content: space-evenly;
   align-content: space-between;
+  @media ${(props) => props.theme.mediaQueries.small} {
+    display: block;
+  }
 `;
 
 function App({ feed, getFeed, loading }) {
@@ -36,26 +39,28 @@ function App({ feed, getFeed, loading }) {
     getFeed();
   }, []);
 
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
   return (
     <MainWrapper>
       <Navbar />
       <ContentWrapper>
-        {feed.map((el) => (
-          <ContentCard feedInfo={el} key={el.id} />
-        ))}
+        {loading ? <Loading /> : RenderCards(feed)}
       </ContentWrapper>
     </MainWrapper>
   );
 }
+
+function RenderCards(feed) {
+  return feed.map((el) => <ContentCard feedInfo={el} key={el.id} />);
+}
+
 const mapStateToProps = ({ feed, loading }) => {
-  console.log(feed);
-  return {
-    feed,
-    loading,
-  };
+  if (Object.keys(feed).length) {
+    return {
+      feed: Object.keys(feed.byId).map((key) => feed.byId[key]),
+      loading,
+    };
+  }
+  return { feed: [], loading };
 };
 
-export default connect(mapStateToProps, { getFeed })(App);
+export default connect(mapStateToProps, { getFeed, respectWorkout })(App);

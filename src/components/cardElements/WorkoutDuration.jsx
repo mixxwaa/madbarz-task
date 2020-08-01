@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { ReactComponent as Clock } from '../../svg/clock-feed.svg';
+import { connect } from 'react-redux';
 
-const Wrapper = styled.div`
+const DurationWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -31,14 +32,18 @@ const Text = styled.span`
   color: #e5e5e5;
 `;
 
-function WorkoutDuration({ duration, plan }) {
+function WorkoutDuration() {
+
   return (
-    <Wrapper>
+    <DurationWrapper>
       <Svg />
       <Text>{duration}</Text>
       <Text>{plan}</Text>
-    </Wrapper>
+    </DurationWrapper>
   );
 }
+const mapState = (state) => {
+  return state;
+};
 
-export default WorkoutDuration;
+export default connect(mapState)(WorkoutDuration);

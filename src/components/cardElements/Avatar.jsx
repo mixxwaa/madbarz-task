@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import { ReactComponent as Premium } from '../../svg/premium.svg';
 import { ReactComponent as Elipse } from '../../svg/Ellipse.svg';
 
 const AvatarImage = styled.img`

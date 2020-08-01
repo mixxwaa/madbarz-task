@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 12px;
-  text-align: center;
+  text-align: left;
   justify-content: center;
 `;
 
@@ -19,11 +19,11 @@ const Featured = styled.h1`
   color: #ff8f00;
 `;
 
-function Header({ name, featured }) {
+function Header(feedInfo) {
   return (
     <Wrapper>
-      <Name>{name}</Name>
-      {featured ? <Featured>Hot & Featured</Featured> : null}
+      <Name>{feedInfo.user.displayName}</Name>
+      {feedInfo.user.featured ? <Featured>Hot & Featured</Featured> : null}
     </Wrapper>
   );
 }

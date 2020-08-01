@@ -1,7 +1,8 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 
+import { respectWorkout, unrespectWorkout } from '../../actions';
 import { ReactComponent as ShareFeed } from '../../svg/share-feed.svg';
 import { ReactComponent as CommentFeed } from '../../svg/comment-feed.svg';
 import { ReactComponent as LikeFeed } from '../../svg/like-feed.svg';
@@ -34,22 +35,32 @@ const LikeIconActive = styled(LikeActive)`
   padding-right: 10px;
 `;
 
-function ActionsBar() {
+function ActionsBar({ id, workout, respectWorkout, unrespectWorkout }) {
   return (
     <Wrapper>
       <ShareFeed />
       <ActionWrapper>
         <PairWrapper>
           <CommentIcon />
-          <span>50</span>
+          <span>{workout.commentsCount}</span>
         </PairWrapper>
         <PairWrapper>
-          <LikeIconActive />
-          <span>124</span>
+          {workout.respected ? (
+            <LikeIconActive
+              onClick={() =>
+                unrespectWorkout(id, workout.isFromPlan, workout.id)
+              }
+            />
+          ) : (
+            <LikeIcon
+              onClick={() => respectWorkout(id, workout.isFromPlan, workout.id)}
+            />
+          )}
+          <span>{workout.respectsCount}</span>
         </PairWrapper>
       </ActionWrapper>
     </Wrapper>
   );
 }
 
-export default ActionsBar;
+export default connect(null, { respectWorkout, unrespectWorkout })(ActionsBar);
