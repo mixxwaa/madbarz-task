@@ -2,6 +2,7 @@
   "name": "madbarz-task",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mixxwaa.github.io/madbarz-task",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -21,7 +22,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "proxy": "lcp --proxyUrl https://api.madbarz.com/api/jobs/GetFeed"
+    "proxy": "lcp --proxyUrl https://api.madbarz.com/api/jobs/GetFeed",
+    "predepoloy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +50,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.5",
+    "gh-pages": "^3.1.0",
     "prettier": "^2.0.5"
   }
 }
