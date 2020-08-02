@@ -23,7 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "proxy": "lcp --proxyUrl https://api.madbarz.com/api/jobs/GetFeed",
-    "predepoloy": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
