@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Logo } from '../svg/logo.svg';
+import MobileMenu from './MobileMenu';
 
 const NavHeader = styled.header`
+  position: fixed;
+  overflow: hidde
+  height: 1vh;
+  z-index: 999;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 30px 10%;
 `;
 const NavLogo = styled(Logo)`
-  width: 6rem;
+  height: 15px;
   cursor: pointer;
+  object-fit: cover;
 `;
 const NavLinks = styled.ul`
   list-style: none;
@@ -21,17 +30,39 @@ const NavListItems = styled.li`
 `;
 
 function Navbar() {
+  const [isMobile, setisMobile] = useState(null);
+
+  const changeMobile = () => {
+    // eslint-disable-next-line no-unused-expressions
+    window.matchMedia('(max-width: 80em)').matches
+      ? setisMobile(true)
+      : setisMobile(false);
+  };
+
+  useEffect(() => {
+    changeMobile();
+    window.addEventListener('resize', changeMobile);
+    return () => window.removeEventListener('resize', changeMobile);
+  }, []);
   return (
-    <NavHeader>
-      <NavLogo />
-      <nav>
-        <NavLinks>
-          <NavListItems>Feed</NavListItems>
-          <NavListItems>Profile</NavListItems>
-          <NavListItems>Sign-Out</NavListItems>
-        </NavLinks>
-      </nav>
-    </NavHeader>
+    <>
+      <NavHeader>
+        <NavLogo />
+        {isMobile ? (
+          <MobileMenu />
+        ) : (
+          <>
+            <nav>
+              <NavLinks>
+                <NavListItems>Feed</NavListItems>
+                <NavListItems>Profile</NavListItems>
+                <NavListItems>Sign-Out</NavListItems>
+              </NavLinks>
+            </nav>
+          </>
+        )}
+      </NavHeader>
+    </>
   );
 }
 

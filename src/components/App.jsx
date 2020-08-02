@@ -11,9 +11,10 @@ import Navbar from './Navbar';
 const MainWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  position: relative;
+  ${'' /* position: relative; */}
 `;
 const ContentWrapper = styled.div`
   box-sizing: border-box;
@@ -24,20 +25,26 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center; */}
-  padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 25rem));
-  justify-content: space-evenly;
-  align-content: space-between;
-  @media ${(props) => props.theme.mediaQueries.small} {
-    display: block;
+  padding: 2rem 4rem 2rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  ${'' /* grid-template-columns: repeat(auto-fit, minmax(375px, 2fr)); */}
+  justify-content: center;
+  align-content: center;
+
+  @media (max-width: 600px) {
+    padding: 2rem 0em 2rem 0rem;
   }
 `;
 
-function App({ feed, getFeed, loading }) {
+const App = ({ feed, getFeed, loading }) => {
   useEffect(() => {
     getFeed();
   }, []);
+
+  const RenderCards = (feed) => {
+    return feed.map((el) => <ContentCard feedInfo={el} key={el.id} />);
+  };
 
   return (
     <MainWrapper>
@@ -47,11 +54,7 @@ function App({ feed, getFeed, loading }) {
       </ContentWrapper>
     </MainWrapper>
   );
-}
-
-function RenderCards(feed) {
-  return feed.map((el) => <ContentCard feedInfo={el} key={el.id} />);
-}
+};
 
 const mapStateToProps = ({ feed, loading }) => {
   if (Object.keys(feed).length) {

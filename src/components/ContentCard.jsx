@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/prop-types */
+import React from 'react';
 
 import styled from 'styled-components';
 
@@ -18,11 +19,18 @@ const MainWrapper = styled.div`
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 2rem;
-  @media ${(props) => props.theme.mediaQueries.small} {
+  ${'' /* @media (max-width: 375px) {
     display: block;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 0 0 15px 0;
     width: 100%;
+    border-right: 0;
+    border-left: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  } */}
+  @media (max-width: 437px) {
+    padding: 0;
+    margin: 0 0 15px 0;
   }
 `;
 const UserWrapper = styled.div`
