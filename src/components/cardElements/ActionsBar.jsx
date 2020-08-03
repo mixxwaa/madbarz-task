@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
@@ -35,7 +35,7 @@ const LikeIconActive = styled(LikeActive)`
   padding-right: 10px;
 `;
 
-function ActionsBar({ id, workout, respectWorkout, unrespectWorkout }) {
+const ActionsBar = ({ id, workout, respectWorkout, unrespectWorkout }) => {
   return (
     <Wrapper>
       <ShareFeed />
@@ -61,6 +61,9 @@ function ActionsBar({ id, workout, respectWorkout, unrespectWorkout }) {
       </ActionWrapper>
     </Wrapper>
   );
-}
+};
 
-export default connect(null, { respectWorkout, unrespectWorkout })(ActionsBar);
+export default connect(null, {
+  respectWorkout,
+  unrespectWorkout,
+})(ActionsBar);

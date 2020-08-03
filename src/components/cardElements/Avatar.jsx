@@ -1,6 +1,6 @@
 import React from 'react';
-
 import styled from 'styled-components';
+
 import { ReactComponent as Elipse } from '../../svg/Ellipse.svg';
 
 const AvatarImage = styled.img`
@@ -19,11 +19,11 @@ const PremiumIcon = styled(Elipse)`
   right: 0;
 `;
 
-const Avatar = ({ src, alt, premium }) => {
+const Avatar = ({ src, premium }) => {
   return (
     <AvatarWrap>
-      <AvatarImage src={src} alt={alt} />
-      {premium ? <PremiumIcon /> : null}
+      <AvatarImage src={src} alt="" />
+      {premium && <PremiumIcon />}
     </AvatarWrap>
   );
 };

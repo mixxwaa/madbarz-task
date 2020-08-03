@@ -19,13 +19,13 @@ const Featured = styled.h1`
   color: #ff8f00;
 `;
 
-function Header(feedInfo) {
+function DisplayName({ user, workout }) {
   return (
     <Wrapper>
-      <Name>{feedInfo.user.displayName}</Name>
-      {feedInfo.user.featured ? <Featured>Hot & Featured</Featured> : null}
+      <Name>{user.displayName}</Name>
+      {workout.featured && <Featured>Hot & Featured</Featured>}
     </Wrapper>
   );
 }
 
-export default Header;
+export default DisplayName;
