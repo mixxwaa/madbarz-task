@@ -6,7 +6,7 @@ import reduxThunk from 'redux-thunk';
 import { ThemeProvider } from 'styled-components';
 
 import reducers from './reducers';
-import App from './components/App';
+import App from './containers/App';
 import GlobalStyle from './style/global';
 import theme from './style/theme';
 

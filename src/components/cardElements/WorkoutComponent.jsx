@@ -29,17 +29,17 @@ const TextOverlay = styled(WorkoutInfo)`
   top: 10%;
 `;
 
-function WorkoutComponent(feedInfo) {
+function WorkoutComponent({ workout, user, workoutFromPlanInfo }) {
   return (
     <>
       <ImageWrapper>
         <Gradient />
-        {feedInfo.workout.imageUrl ? (
-          <WorkoutImg src={feedInfo.workout.imageUrl} alt="" />
+        {workout.imageUrl ? (
+          <WorkoutImg src={workout.imageUrl} alt="" />
         ) : (
-          <WorkoutImg src={feedInfo.user.profilePhoto} alt="" />
+          <WorkoutImg src={user.profilePhoto} alt="" />
         )}
-        <TextOverlay {...feedInfo.workout} {...feedInfo.workoutFromPlanInfo} />
+        <TextOverlay workoutInfo={workout} planFrom={workoutFromPlanInfo} />
       </ImageWrapper>
     </>
   );

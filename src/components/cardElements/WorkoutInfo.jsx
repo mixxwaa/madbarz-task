@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Clock } from '../../svg/clock-feed.svg';
 
@@ -38,7 +38,8 @@ const WorkoutComment = styled.h2`
     display: hidden;
   }
 `;
-//workout stles
+
+// workout stles
 const DurationWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -74,18 +75,21 @@ const Container = styled.div`
   margin-bottom: 1rem;
 `;
 
-function WorkoutInfo(info) {
+function WorkoutInfo({
+  workoutInfo: { duration, name, userComment, isFromPlan },
+  planFrom: { planInfoFormatted },
+}) {
   return (
     <Wrapper>
       <DurationWrapper>
         <Container>
           <Svg />
-          <Text>{info.duration}</Text>
-          {info.isFromPlan ? <Text>{info.planInfoFormatted}</Text> : null}
+          <Text>{duration}</Text>
+          {isFromPlan && <Text>{planInfoFormatted}</Text>}
         </Container>
       </DurationWrapper>
-      <WorkoutTitle>{info.name}</WorkoutTitle>
-      <WorkoutComment>{info.userComment}</WorkoutComment>
+      <WorkoutTitle>{name}</WorkoutTitle>
+      <WorkoutComment>{userComment}</WorkoutComment>
     </Wrapper>
   );
 }

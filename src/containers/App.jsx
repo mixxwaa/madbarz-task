@@ -1,13 +1,15 @@
+/* eslint-disable no-shadow */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { Waypoint } from 'react-waypoint';
+// eslint-disable-next-line import/no-extraneous-dependencies
 
 import { getFeed, respectWorkout, updateFeed } from '../actions';
 
-import ContentCard from './ContentCard';
-import Loading from './Loading';
-import Navbar from './Navbar';
+import ContentCard from '../components/ContentCard';
+import Loading from '../components/Loading';
+import Navbar from '../components/Navbar';
 
 const MainWrapper = styled.div`
   display: flex;
