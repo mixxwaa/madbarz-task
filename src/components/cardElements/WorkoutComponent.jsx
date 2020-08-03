@@ -34,7 +34,11 @@ function WorkoutComponent(feedInfo) {
     <>
       <ImageWrapper>
         <Gradient />
-        <WorkoutImg src={feedInfo.workout.imageUrl} alt="" />
+        {feedInfo.workout.imageUrl ? (
+          <WorkoutImg src={feedInfo.workout.imageUrl} alt="" />
+        ) : (
+          <WorkoutImg src={feedInfo.user.profilePhoto} alt="" />
+        )}
         <TextOverlay {...feedInfo.workout} {...feedInfo.workoutFromPlanInfo} />
       </ImageWrapper>
     </>

@@ -15,7 +15,9 @@ const TimePublished = styled.h1`
 function Time({ date }) {
   return (
     <div>
-      <TimePublished>{date}</TimePublished>
+      <TimePublished>
+        {date} {!date.includes('Just now') && 'ago'}
+      </TimePublished>
     </div>
   );
 }
