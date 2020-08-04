@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6394ed61c3a5cb4ce94fe3670bfd7b2b",
+    "revision": "0ae0af081a100f07d2d929e60e2f3320",
     "url": "/madbarz-task/index.html"
   },
   {
-    "revision": "4d2f3f2985c78b561d78",
-    "url": "/madbarz-task/static/js/2.79ab58a1.chunk.js"
+    "revision": "75c46aa404151e471ed8",
+    "url": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/madbarz-task/static/js/2.79ab58a1.chunk.js.LICENSE.txt"
+    "url": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ee6a49b348809691c3db",
-    "url": "/madbarz-task/static/js/main.41fb6939.chunk.js"
+    "revision": "6ac76e63069b4695af64",
+    "url": "/madbarz-task/static/js/main.97f9a641.chunk.js"
   },
   {
     "revision": "cb7da81754cdaec94bec",
@@ -50,10 +50,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6414d04950929a666b0299340dca7d38",
     "url": "/madbarz-task/static/media/logo.6414d049.svg"
-  },
-  {
-    "revision": "04f1a5aac89405ea25bad1bff24429e5",
-    "url": "/madbarz-task/static/media/open-menu.04f1a5aa.svg"
   },
   {
     "revision": "945eaed41748569d4b7d33eeea3cd78b",

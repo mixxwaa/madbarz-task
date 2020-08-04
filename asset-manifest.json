@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/madbarz-task/static/js/main.41fb6939.chunk.js",
-    "main.js.map": "/madbarz-task/static/js/main.41fb6939.chunk.js.map",
+    "main.js": "/madbarz-task/static/js/main.97f9a641.chunk.js",
+    "main.js.map": "/madbarz-task/static/js/main.97f9a641.chunk.js.map",
     "runtime-main.js": "/madbarz-task/static/js/runtime-main.d4c97ab1.js",
     "runtime-main.js.map": "/madbarz-task/static/js/runtime-main.d4c97ab1.js.map",
-    "static/js/2.79ab58a1.chunk.js": "/madbarz-task/static/js/2.79ab58a1.chunk.js",
-    "static/js/2.79ab58a1.chunk.js.map": "/madbarz-task/static/js/2.79ab58a1.chunk.js.map",
+    "static/js/2.5ef7d2dc.chunk.js": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js",
+    "static/js/2.5ef7d2dc.chunk.js.map": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js.map",
     "index.html": "/madbarz-task/index.html",
-    "precache-manifest.2fefe327639cb3a5219cb6a7354b6fd2.js": "/madbarz-task/precache-manifest.2fefe327639cb3a5219cb6a7354b6fd2.js",
+    "precache-manifest.8f50e9b97810ae09f6cdd5e0f00c186b.js": "/madbarz-task/precache-manifest.8f50e9b97810ae09f6cdd5e0f00c186b.js",
     "service-worker.js": "/madbarz-task/service-worker.js",
-    "static/js/2.79ab58a1.chunk.js.LICENSE.txt": "/madbarz-task/static/js/2.79ab58a1.chunk.js.LICENSE.txt",
+    "static/js/2.5ef7d2dc.chunk.js.LICENSE.txt": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js.LICENSE.txt",
     "static/media/Ellipse.8e76e78b.svg": "/madbarz-task/static/media/Ellipse.8e76e78b.svg",
     "static/media/clock-feed.aa81e8da.svg": "/madbarz-task/static/media/clock-feed.aa81e8da.svg",
     "static/media/comment-feed.21b68c55.svg": "/madbarz-task/static/media/comment-feed.21b68c55.svg",
@@ -18,12 +18,11 @@
     "static/media/like-feed.9d721eff.svg": "/madbarz-task/static/media/like-feed.9d721eff.svg",
     "static/media/loader.ca86a661.svg": "/madbarz-task/static/media/loader.ca86a661.svg",
     "static/media/logo.6414d049.svg": "/madbarz-task/static/media/logo.6414d049.svg",
-    "static/media/open-menu.04f1a5aa.svg": "/madbarz-task/static/media/open-menu.04f1a5aa.svg",
     "static/media/share-feed.945eaed4.svg": "/madbarz-task/static/media/share-feed.945eaed4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d4c97ab1.js",
-    "static/js/2.79ab58a1.chunk.js",
-    "static/js/main.41fb6939.chunk.js"
+    "static/js/2.5ef7d2dc.chunk.js",
+    "static/js/main.97f9a641.chunk.js"
   ]
 }
