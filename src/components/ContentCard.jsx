@@ -15,11 +15,11 @@ const MainWrapper = styled.div`
   margin: 2rem;
   @media (max-width: 437px) {
     padding: 0;
-    margin: 0 0 15px 0;
+    margin: 1rem 0 15px 0;
   }
 `;
 
-const ContentCard = ({ feedInfo }) => {
+const ContentCard = React.memo(({ feedInfo }) => {
   if (Object.keys(feedInfo).length) {
     return (
       <MainWrapper>
@@ -34,6 +34,6 @@ const ContentCard = ({ feedInfo }) => {
       <div>Loading...</div>
     </MainWrapper>
   );
-};
+});
 
 export default ContentCard;

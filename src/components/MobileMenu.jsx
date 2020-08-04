@@ -8,15 +8,13 @@ import { ReactComponent as FireTrending } from '../svg/fire-trending.svg';
 const StickyBoxWrap = styled.div`
   display: flex;
 `;
-const BurgerIcon = styled.img``;
-const Test = styled.div`
-  display: flex;
-  padding-right: 20px;
-  align-items: center;
-  justify-content: space-evenly;
+const BurgerIcon = styled.img`
+  width: 30px;
 `;
+
 const MenuText = styled.h1`
   padding-left: 15px;
+  font-size: 15px;
 `;
 const MobileMenuWrapper = styled.div`
   margin-bottom: 20px;
