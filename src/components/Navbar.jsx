@@ -54,7 +54,7 @@ function Navbar() {
           <>
             <nav>
               <NavLinks>
-                <NavListItems>Feed</NavListItems>
+                <NavListItems style={{ fontWeight: 'bold' }}>Feed</NavListItems>
                 <NavListItems>Profile</NavListItems>
                 <NavListItems>Sign-Out</NavListItems>
               </NavLinks>
