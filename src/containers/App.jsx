@@ -22,7 +22,7 @@ const ContentWrapper = styled.div`
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 2rem 4rem 2rem 4rem;
   display: flex;
   flex-wrap: wrap;
@@ -37,21 +37,19 @@ const App = ({ feed, getFeed, updateFeed, loading }) => {
     getFeed();
   }, []);
 
-  const RenderCards = (feed) => {
-    return feed.map((el) => <ContentCard feedInfo={el} key={el.id} />);
-  };
+  const RenderedCards = feed.map((el) => (
+    <ContentCard feedInfo={el} key={el.id} />
+  ));
 
   return (
     <MainWrapper>
       <Navbar />
-      <ContentWrapper>
-        {loading ? <Loading /> : RenderCards(feed)}
-      </ContentWrapper>
-      {!loading ? (
+      <ContentWrapper>{loading ? <Loading /> : RenderedCards}</ContentWrapper>
+      {!loading && (
         <div>
           <Waypoint bottomOffset="-800px" onEnter={() => updateFeed()} />
         </div>
-      ) : null}
+      )}
     </MainWrapper>
   );
 };

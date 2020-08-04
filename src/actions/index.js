@@ -28,11 +28,11 @@ export const updateFeed = () => async (dispatch, getState) => {
   dispatch({ type: TYPE.UPDATE_FEED_DATA, payload: response.data });
 };
 
-export const respectWorkout = (id, isPlan, workoutId) => (dispatch) => {
+export const respectWorkout = (id, isFromPlan, workoutID) => (dispatch) => {
   mad
     .post('respect', {
-      workoutID: workoutId,
-      isFromPlan: isPlan,
+      workoutID,
+      isFromPlan,
     })
     .catch(() => {
       dispatch({ type: TYPE.UNRESPECT_WORKOUT, id });
@@ -43,11 +43,11 @@ export const respectWorkout = (id, isPlan, workoutId) => (dispatch) => {
   });
 };
 
-export const unrespectWorkout = (id, isPlan, workoutId) => (dispatch) => {
+export const unrespectWorkout = (id, isFromPlan, workoutID) => (dispatch) => {
   mad
     .post('unrespect', {
-      workoutID: workoutId,
-      isFromPlan: isPlan,
+      workoutID,
+      isFromPlan,
     })
     .catch(() => {
       dispatch({ type: TYPE.RESPECT_WORKOUT, id });

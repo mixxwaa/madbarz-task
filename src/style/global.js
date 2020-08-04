@@ -6,7 +6,6 @@ export default createGlobalStyle`
     padding: 0;
 }
 html {
-    ${'' /* font-size: 62.5%; */}
     box-sizing: border-box;
     }
 }
