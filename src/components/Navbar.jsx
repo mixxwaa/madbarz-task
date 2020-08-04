@@ -11,7 +11,7 @@ const NavHeader = styled.header`
   background-color: white;
   border-bottom: 1px solid #ccc;
   width: 100%;
-  padding: 30px;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
