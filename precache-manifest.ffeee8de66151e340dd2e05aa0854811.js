@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d9565c36cc0c5c107fa6d082af73b524",
+    "revision": "502e7fc0996dc54251bcc1e6d8a84ed4",
     "url": "/madbarz-task/index.html"
   },
   {
-    "revision": "9970babb5b4bacd6ee88",
-    "url": "/madbarz-task/static/js/2.4d0671bb.chunk.js"
+    "revision": "75c46aa404151e471ed8",
+    "url": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/madbarz-task/static/js/2.4d0671bb.chunk.js.LICENSE.txt"
+    "url": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "30623cf238bd71082a3c",
-    "url": "/madbarz-task/static/js/main.b30a3c61.chunk.js"
+    "revision": "52f13fe796e51f6e884f",
+    "url": "/madbarz-task/static/js/main.7b6589cd.chunk.js"
   },
   {
     "revision": "cb7da81754cdaec94bec",

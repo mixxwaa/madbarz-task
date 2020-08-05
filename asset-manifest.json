@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/madbarz-task/static/js/main.b30a3c61.chunk.js",
-    "main.js.map": "/madbarz-task/static/js/main.b30a3c61.chunk.js.map",
+    "main.js": "/madbarz-task/static/js/main.7b6589cd.chunk.js",
+    "main.js.map": "/madbarz-task/static/js/main.7b6589cd.chunk.js.map",
     "runtime-main.js": "/madbarz-task/static/js/runtime-main.d4c97ab1.js",
     "runtime-main.js.map": "/madbarz-task/static/js/runtime-main.d4c97ab1.js.map",
-    "static/js/2.4d0671bb.chunk.js": "/madbarz-task/static/js/2.4d0671bb.chunk.js",
-    "static/js/2.4d0671bb.chunk.js.map": "/madbarz-task/static/js/2.4d0671bb.chunk.js.map",
+    "static/js/2.5ef7d2dc.chunk.js": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js",
+    "static/js/2.5ef7d2dc.chunk.js.map": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js.map",
     "index.html": "/madbarz-task/index.html",
-    "precache-manifest.bd699ae2f36f07101947352073ed3e14.js": "/madbarz-task/precache-manifest.bd699ae2f36f07101947352073ed3e14.js",
+    "precache-manifest.ffeee8de66151e340dd2e05aa0854811.js": "/madbarz-task/precache-manifest.ffeee8de66151e340dd2e05aa0854811.js",
     "service-worker.js": "/madbarz-task/service-worker.js",
-    "static/js/2.4d0671bb.chunk.js.LICENSE.txt": "/madbarz-task/static/js/2.4d0671bb.chunk.js.LICENSE.txt",
+    "static/js/2.5ef7d2dc.chunk.js.LICENSE.txt": "/madbarz-task/static/js/2.5ef7d2dc.chunk.js.LICENSE.txt",
     "static/media/Ellipse.8e76e78b.svg": "/madbarz-task/static/media/Ellipse.8e76e78b.svg",
     "static/media/clock-feed.aa81e8da.svg": "/madbarz-task/static/media/clock-feed.aa81e8da.svg",
     "static/media/comment-feed.21b68c55.svg": "/madbarz-task/static/media/comment-feed.21b68c55.svg",
@@ -22,7 +22,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d4c97ab1.js",
-    "static/js/2.4d0671bb.chunk.js",
-    "static/js/main.b30a3c61.chunk.js"
+    "static/js/2.5ef7d2dc.chunk.js",
+    "static/js/main.7b6589cd.chunk.js"
   ]
 }
