@@ -1,9 +1,7 @@
-/* eslint-disable no-shadow */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { Waypoint } from 'react-waypoint';
-// eslint-disable-next-line import/no-extraneous-dependencies
 
 import { getFeed, respectWorkout, updateFeed } from '../actions';
 

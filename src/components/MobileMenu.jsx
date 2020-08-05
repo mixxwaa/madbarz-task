@@ -23,7 +23,6 @@ const MobileMenuWrapper = styled.div`
 function MobileMenu() {
   const [isOpened, setisOpened] = useState(false);
 
-  // eslint-disable-next-line no-shadow
   const isMenuOpen = ({ isOpened }) => {
     setisOpened(isOpened);
   };

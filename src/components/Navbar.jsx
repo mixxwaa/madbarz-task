@@ -33,8 +33,7 @@ function Navbar() {
   const [isMobile, setisMobile] = useState(null);
 
   const changeMobile = () => {
-    // eslint-disable-next-line no-unused-expressions
-    window.matchMedia('(max-width: 80em)').matches
+    window.matchMedia('(max-width: 50em)').matches
       ? setisMobile(true)
       : setisMobile(false);
   };

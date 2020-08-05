@@ -36,6 +36,16 @@ const LikeIconActive = styled(LikeActive)`
 `;
 
 const ActionsBar = ({ id, workout, respectWorkout, unrespectWorkout }) => {
+  const RespectIconDisplay = workout.respected ? (
+    <LikeIconActive
+      onClick={() => unrespectWorkout(id, workout.isFromPlan, workout.id)}
+    />
+  ) : (
+    <LikeIcon
+      onClick={() => respectWorkout(id, workout.isFromPlan, workout.id)}
+    />
+  );
+
   return (
     <Wrapper>
       <ShareFeed />
@@ -45,17 +55,7 @@ const ActionsBar = ({ id, workout, respectWorkout, unrespectWorkout }) => {
           <span>{workout.commentsCount}</span>
         </PairWrapper>
         <PairWrapper>
-          {workout.respected ? (
-            <LikeIconActive
-              onClick={() =>
-                unrespectWorkout(id, workout.isFromPlan, workout.id)
-              }
-            />
-          ) : (
-            <LikeIcon
-              onClick={() => respectWorkout(id, workout.isFromPlan, workout.id)}
-            />
-          )}
+          {RespectIconDisplay}
           <span>{workout.respectsCount}</span>
         </PairWrapper>
       </ActionWrapper>

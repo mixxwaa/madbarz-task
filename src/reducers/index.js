@@ -1,6 +1,8 @@
+import * as TYPE from '../actions/types';
+
 const respectReducer = (state, action) => {
   switch (action.type) {
-    case 'RESPECT_WORKOUT':
+    case TYPE.RESPECT_WORKOUT:
       return {
         ...state,
         [action.id]: {
@@ -12,7 +14,7 @@ const respectReducer = (state, action) => {
           },
         },
       };
-    case 'UNRESPECT_WORKOUT':
+    case TYPE.UNRESPECT_WORKOUT:
       return {
         ...state,
         [action.id]: {
@@ -31,13 +33,13 @@ const respectReducer = (state, action) => {
 
 const feedReducer = (state = { feed: {}, loading: true }, action) => {
   switch (action.type) {
-    case 'SET_USERS':
+    case TYPE.FETCH_FEED_DATA:
       return { ...state, feed: action.payload };
-    case 'LOAD_USERS':
+    case TYPE.LOADING_START:
       return { ...state, loading: true };
-    case 'FINISHED_LOADING':
+    case TYPE.LOADING_FINISHED:
       return { ...state, loading: false };
-    case 'RESPECT_WORKOUT':
+    case TYPE.RESPECT_WORKOUT:
       return {
         ...state,
         feed: {
@@ -45,7 +47,7 @@ const feedReducer = (state = { feed: {}, loading: true }, action) => {
           byId: respectReducer(state.feed.byId, action),
         },
       };
-    case 'UNRESPECT_WORKOUT':
+    case TYPE.UNRESPECT_WORKOUT:
       return {
         ...state,
         feed: {
