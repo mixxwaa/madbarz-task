@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "444782ee4aa86c0e1f296ae54f2bf6a8",
+    "revision": "0a1e36f40078d7a99de53daac4cfe360",
     "url": "/madbarz-task/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/madbarz-task/static/js/2.4d0671bb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4cf46ef650be4b802cb5",
-    "url": "/madbarz-task/static/js/main.859672f5.chunk.js"
+    "revision": "d72ec01dbf4e7c2560ae",
+    "url": "/madbarz-task/static/js/main.ff36fb19.chunk.js"
   },
   {
     "revision": "cb7da81754cdaec94bec",
