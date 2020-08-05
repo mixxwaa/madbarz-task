@@ -33,7 +33,7 @@ function Navbar() {
   const [isMobile, setisMobile] = useState(null);
 
   const changeMobile = () => {
-    window.matchMedia('(max-width: 50em)').matches
+    window.matchMedia('(max-width: 1010px)').matches
       ? setisMobile(true)
       : setisMobile(false);
   };
