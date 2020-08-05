@@ -35,10 +35,22 @@ const feedReducer = (state = { feed: {}, loading: true }, action) => {
   switch (action.type) {
     case TYPE.FETCH_FEED_DATA:
       return { ...state, feed: action.payload };
+    case TYPE.UPDATE_FEED_DATA:
+      return {
+        ...state,
+        feed: {
+          ...state.feed,
+          ids: [...state.feed.ids, ...action.payload.ids],
+          featuredCount:
+            state.feed.featuredCount + action.payload.featuredCount,
+          byId: { ...state.feed.byId, ...action.payload.byId },
+        },
+      };
     case TYPE.LOADING_START:
       return { ...state, loading: true };
     case TYPE.LOADING_FINISHED:
       return { ...state, loading: false };
+
     case TYPE.RESPECT_WORKOUT:
       return {
         ...state,
